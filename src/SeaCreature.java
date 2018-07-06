@@ -11,7 +11,12 @@ import javax.swing.JApplet;
 import java.applet.AudioClip;
 
 public class SeaCreature {
-
+	public static void main(String[] args) {
+		SeaCreature seacreature = new SeaCreature("robeye");
+		seacreature.getName();
+		seacreature.eat();
+		seacreature.laugh();
+	}
 	private String name;
 
 	SeaCreature(String name) {
@@ -28,7 +33,7 @@ public class SeaCreature {
 
 	public void laugh() {
 		try {
-		    AudioClip sound = JApplet.newAudioClip(getClass().getResource(this.name + ".wav"));
+		    AudioClip sound = JApplet.newAudioClip(getClass().getResource("squidward.wav"));
 		    sound.play();
 			Thread.sleep(3400);
 		} catch (Exception ex) {

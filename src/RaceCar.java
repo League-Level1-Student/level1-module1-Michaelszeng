@@ -4,6 +4,15 @@ public class RaceCar {
 	private String brand;
 	private int positionInRace;
 	public boolean damaged = false;
+	public static void main(String[] args) {
+		RaceCar racecar = new RaceCar("Bugatti", 1);
+		racecar.pit();
+		racecar.crash();
+		racecar.overtake();
+		racecar.overtake();
+		racecar.overtake();
+		racecar.overtake();
+	}
 	
 	/**
 	 * 

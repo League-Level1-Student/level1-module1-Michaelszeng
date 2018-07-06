@@ -12,7 +12,18 @@
  */
 
 public class Smurf {
-
+	public static void main(String[] args) {
+		Smurf smurf = new Smurf("rob");
+		smurf.getName();
+		smurf.eat();
+		smurf.getHatColor();
+		smurf.isGirlOrBoy("boy");
+		Smurf smurfette = new Smurf("Robba");
+		smurfette.getName();
+		smurfette.eat();
+		smurfette.getHatColor();
+		smurfette.isGirlOrBoy("gorl");
+	}
 	private String name;
 
 	Smurf(String name) {
@@ -28,15 +39,21 @@ public class Smurf {
 	}
 
 	/* Papa Smurf wears a red hat, all the others are white. */
-	public String getHatColor() {
-		// 3. Fill in this method
-		return "";
+	public void getHatColor() {
+		if (name.equals("papa")) {
+			System.out.println(name+" wears a red hat");
+		}
+		else {
+			System.out.println(name+" wears a white hat");
+		}
 	}
+	private String gender;
 
 	/* Smurfette is the only female Smurf. */
-	public String isGirlOrBoy() {
+	public void isGirlOrBoy(String gender) {
 		// 4. Fill in this method
-		return "";
+		this.gender=gender;
+		System.out.println(name+" is a "+gender);
 	}
 
 }
